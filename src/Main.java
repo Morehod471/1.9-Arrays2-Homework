@@ -49,14 +49,12 @@ public class Main {
         int[] arr = generateRandomArray();
         int dayInMonth = 30;
         double sum = 0;
-        for (int i = 0; i < arr.length; i++) {
-            sum = sum + arr[i];
-            if (i == arr.length - 1) {
-                System.out.println(sum);
-                double averageWasteInMonth = sum / dayInMonth;
-                System.out.println("Средняя сумма трат за месяц составила " + averageWasteInMonth + " рублей");
-            }
+        for (int j : arr) {
+            sum = sum + j;
         }
+        System.out.println(sum);
+        double averageWasteInMonth = sum / dayInMonth;
+        System.out.println("Средняя сумма трат за месяц составила " + averageWasteInMonth + " рублей");
     }
 
     private static void task4() {
